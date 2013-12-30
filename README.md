@@ -1,4 +1,4 @@
-# mgo-mousetrap
+# Angularized Mousetrap: mgo-mousetrap 
 
 This is a little wrapper for the awesome [MouseTrap library](http://craig.is/killing/mice) which takes care of binding key strokes to some function.
 

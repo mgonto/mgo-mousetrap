@@ -39,3 +39,7 @@ In here, when the user clicks command + shift + k, then the super cool action is
 In every `w-mousetrap` attribute you can define ANY number of key shortcuts :).
 
 Hope you guys like this!!!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mgonto/mgo-mousetrap/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

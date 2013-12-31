@@ -12,10 +12,12 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
                      function ($scope, $element, $attrs) {
             
             $scope.$watch($attrs.wMousetrap, function(mousetrap) {
-                _.forIn(mousetrap, function(value, key) {
-                   Mousetrap.unbind(key);
-                   Mousetrap.bind(key, applyWrapper(value)); 
-                });
+                for (var key in mousetrap) {
+                    if (mousetrap.hasOwnProperty(key)) {
+                        Mousetrap.unbind(key);
+                        Mousetrap.bind(key, applyWrapper(mousetrap[key])); 
+                    }
+                }
             }, true);
             
             function applyWrapper(func) {

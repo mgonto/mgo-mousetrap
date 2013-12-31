@@ -1,6 +1,6 @@
-# Angularized Mousetrap: mgo-mousetrap 
+# mgo-mousetrap 
 
-This is a little wrapper for the awesome [MouseTrap library](http://craig.is/killing/mice) which takes care of binding key strokes to some function.
+This is a library that lets you handle keyboard interaction on an Angular app. It's an Angular Mousetrap wrapper for the awesome [MouseTrap library](http://craig.is/killing/mice) which takes care of binding key strokes to some function.
 
 ## Usage
 

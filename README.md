@@ -38,6 +38,15 @@ In here, when the user clicks command + shift + k, then the super cool action is
 
 In every `w-mousetrap` attribute you can define ANY number of key shortcuts :).
 
+You can also receive the event that's called with mousetrap to call `preventDefault` or `stopPropagation`. For example, `superCoolAction` might look like:
+
+````js
+$scope.superCoolAction = function(event) {
+    event.preventDefault();
+    alert("Super cool");
+}
+````
+
 Hope you guys like this!!!
 
 

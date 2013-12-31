@@ -8,7 +8,8 @@
     "url": "git://github.com/mgonto/mgo-mousetrap.git"
   },
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "mousetrap": ">= 1.4.4"
   },
   "ignore": [
     "node_modules",

@@ -19,9 +19,9 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
             }, true);
             
             function applyWrapper(func) {
-                return function() {
+                return function(e) {
                     $scope.$apply(function() {
-                        func();
+                        func(e);
                     });
                 };
             }

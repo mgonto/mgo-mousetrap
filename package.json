@@ -1,0 +1,34 @@
+{
+  "name": "mgo-mousetrap",
+  "description": "Handling keyboard interaction on an Angular app: An Angular Mousetrap wrapper",
+  "version": "0.0.2",
+  "filename": "wMousetrap.js",
+  "main": "./wMousetrap.js",
+  "homepage": "https://github.com/mgonto/mgo-mousetrap",
+  "author": "Martin Gontovnikas <martin@gon.to>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgonto/mgo-mousetrap.git"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "keywords": [
+    "angular",
+    "keyboard",
+    "keypress",
+    "mousetrap",
+    "binding",
+    "keydown",
+    "keyup"
+  ],
+  "maintainers": [
+    {
+      "name": "Martin Gontovnikas",
+      "website": "http://gon.to/"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}

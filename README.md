@@ -19,7 +19,7 @@ angular.module('myCoolApp', ['mgo-mousetrap']);
 Now you're prepared to use it. For that, you can add this directive to any field and state which keys and actions will happen. For example, let's look at the following pager:
 
 ````html
-<div class="pager" w-mousetrap="{left: previousPage, next: previousPage}">
+<div class="pager" w-mousetrap="{left: previousPage, right: previousPage}">
   <li ng-click="previousPage()">Previous</li>
   <li ng-repeat="page in pages" ng-click="goTopage(page)">{{page}}</li>
   <li ng-click="nextPage()">Next</li>

@@ -5,7 +5,7 @@
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
-angular.module('mgo-mousetrap', []).directive('wMousetrap', ['$parse', function ($parse) {
+angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
     return {
         restrict: 'A',
         controller: ['$scope', '$element', '$attrs',
@@ -15,7 +15,7 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', ['$parse', function 
 
             $scope.$watch($attrs.wMousetrap, function(_mousetrap) {
                 mousetrap = _mousetrap;
-                
+
                 for (var key in mousetrap) {
                     if (mousetrap.hasOwnProperty(key)) {
                         Mousetrap.unbind(key);

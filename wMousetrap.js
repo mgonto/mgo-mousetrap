@@ -11,7 +11,11 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', ['$parse', function 
         controller: ['$scope', '$element', '$attrs',
                      function ($scope, $element, $attrs) {
             
-            $scope.$watch($attrs.wMousetrap, function(mousetrap) {
+            var mousetrap;
+
+            $scope.$watch($attrs.wMousetrap, function(_mousetrap) {
+                mousetrap = _mousetrap;
+                
                 for (var key in mousetrap) {
                     if (mousetrap.hasOwnProperty(key)) {
                         Mousetrap.unbind(key);
@@ -29,7 +33,8 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', ['$parse', function 
             }
             
             $element.bind('$destroy', function() {
-                var mousetrap = $parse($attrs.wMousetrap)($scope);
+                if (!mousetrap) return;
+
                 for (var key in mousetrap) {
                     if (mousetrap.hasOwnProperty(key)) {
                         Mousetrap.unbind(key);

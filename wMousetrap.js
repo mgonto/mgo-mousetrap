@@ -5,7 +5,7 @@
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
-angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
+angular.module('mgo-mousetrap', []).directive('wMousetrap', ['$parse', function ($parse) {
     return {
         restrict: 'A',
         controller: ['$scope', '$element', '$attrs',
@@ -28,6 +28,15 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
                 };
             }
             
+            $element.bind('$destroy', function() {
+                var mousetrap = $parse($attrs.wMousetrap)($scope);
+                for (var key in mousetrap) {
+                    if (mousetrap.hasOwnProperty(key)) {
+                        Mousetrap.unbind(key);
+                    }
+                }
+            });
+
         }]
     }
-});
+}]);

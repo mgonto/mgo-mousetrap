@@ -44,4 +44,4 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
 
         }]
     }
-}]);
+});

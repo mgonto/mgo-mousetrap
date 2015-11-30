@@ -1,6 +1,6 @@
 /**
  * Mousetrap wrapper for AngularJS
- * @version v0.0.1 - 2013-12-30
+ * @version v0.1.0 - 2015-11-30
  * @link https://github.com/mgonto/mgo-mousetrap
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -23,11 +23,17 @@ angular.module('mgo-mousetrap', []).directive('wMousetrap', function () {
                     }
                 }
             }, true);
-            
-            function applyWrapper(func) {
+
+            function applyWrapper(fnc) {
+                var func = fnc[0] || fnc,
+                    params = [];
+                if (angular.isArray(fnc)) {
+                    fnc.shift();
+                    params = fnc;
+                }
                 return function(e) {
                     $scope.$apply(function() {
-                        func(e);
+                        func(e, params);
                     });
                 };
             }

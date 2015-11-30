@@ -1,6 +1,6 @@
 {
   "name": "mgo-mousetrap",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "./wMousetrap.js",
   "description": "Handling keyboard interaction on an Angular app: An Angular Mousetrap wrapper",
   "repository": {

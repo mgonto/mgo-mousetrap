@@ -1,6 +1,6 @@
 /**
  * Mousetrap wrapper for AngularJS
- * @version v0.1.0 - 2015-11-30
+ * @version v0.2.0 - 2015-11-30
  * @link https://github.com/mgonto/mgo-mousetrap
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT

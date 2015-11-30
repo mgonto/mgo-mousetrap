@@ -47,7 +47,7 @@ $scope.superCoolAction = function(event) {
 }
 ````
 
-Let's check a example with custom parameters (require v0.1.0 or higher):
+Let's check an example with custom parameters (require v0.2.0 or higher):
 ````html
 <input type="button" value="Make super cool action" ng-click="superCoolActionWithParams()" w-mousetrap="{'command+shift+p': [superCoolActionWithParams, scopeVariable, 'myCustomString'}" />
 ````
